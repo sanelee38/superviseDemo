@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+    <title>计划分类统计</title>
+</head>
+<body>
+
+计划分类统计
+
+<script th:src="@{/layui/layui.js}" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'element'], function(){
+        var form = layui.form;
+        var element = layui.element;
+
+        //自定义验证规则
+        form.verify({
+            price: [/(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/, "请输入正确的价格"]
+        });
+
+    });
+</script>
+</body>
+</html>

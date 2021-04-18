@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>用户管理</title>
+</head>
+<body>
+<div class="layui-container">
+  <div class="layui-row">
+    <table class="layui-table">
+      <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+      </colgroup>
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>昵称</th>
+        <th>用户名</th>
+        <th>注册时间</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>小兰</td>
+        <td>test@test.com</td>
+        <td>2021-3-29 12:20</td>
+        <td>
+          <button type="button" class="layui-btn layui-btn-sm">
+          <i class="layui-icon">&#xe642;</i>
+        </button>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe640;</i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>小霞</td>
+        <td>test@test.com</td>
+        <td>2021-3-29 10:05</td>
+        <td>
+          <button type="button" class="layui-btn layui-btn-sm">
+          <i class="layui-icon">&#xe642;</i>
+        </button>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe640;</i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>蓝蓝</td>
+        <td>test@test.com</td>
+        <td>2021-3-29 12:05</td>
+        <td>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe642;</i>
+          </button>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe640;</i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>静静</td>
+        <td>test@test.com</td>
+        <td>2021-3-29 13:05</td>
+        <td>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe642;</i>
+          </button>
+          <button type="button" class="layui-btn layui-btn-sm">
+            <i class="layui-icon">&#xe640;</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

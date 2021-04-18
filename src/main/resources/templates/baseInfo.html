@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>煤矿基本情况 </title>
+</head>
+<body>
+
+
+<div class="layui-container" style="margin-top: 40px">
+  <h1>煤矿基本信息查询</h1>
+  <hr class="layui-border-black">
+  <div class="layui-row layui-col-space1" >
+    <div class="layui-col-md10" style="text-align: center">
+      <div class="layui-btn-container">
+        <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">煤矿</button>
+        <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">企业</button>
+      </div>
+    </div>
+    <div class="layui-col-md10" style="width: 1000px">
+      <div class="layui-row layui-col-space12" style="text-align: center">
+        <div class="layui-col-md1">
+          <h3>查询条件</h3>
+        </div>
+        <div class="layui-col-md2">
+          <input type="text" name="title"  class="layui-input">
+        </div>
+        <div class="layui-col-md2">
+          <input type="text" name="title"  class="layui-input">
+        </div>
+        <div class="layui-col-md2">
+          <input type="text" name="title"  class="layui-input">
+        </div>
+    </div>
+      <hr class="layui-border-black">
+      <div class="layui-form-item">
+        <h3 class="layui-inline">行政区域：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+        <div class="layui-inline">
+          <select name="city" lay-verify="" class="layui-select">
+            <option value="">请选择省份</option>
+            <option value="010">北京</option>
+            <option value="021">上海</option>
+            <option value="0571">杭州</option>
+          </select>
+        </div>
+        <div class="layui-inline">
+          <select name="city" lay-verify="" class="layui-select">
+            <option value="">请选择市区</option>
+            <option value="010">北京</option>
+            <option value="021">上海</option>
+            <option value="0571">杭州</option>
+          </select>
+        </div>
+        <div class="layui-inline">
+          <select name="city" lay-verify="" class="layui-select">
+            <option value="">请选择城市</option>
+            <option value="010">北京</option>
+            <option value="021">上海</option>
+            <option value="0571">杭州</option>
+          </select>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">监察机构：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <input type="text" name="title" class="layui-input">
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">矿井状况：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <input type="text" name="title" class="layui-input">
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">冲击地压类型：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <input type="text" name="title" class="layui-input">
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">矿井类型：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">露天</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">井工</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">显示关闭矿井：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-warm">是</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">否</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">瓦斯等级：</h3>
+          </div>
+          <div class="layui-col-md10">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">高瓦斯</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-warm ">低瓦斯</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">突出</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">按突出煤层管理</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">未鉴定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">许可证状态：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">未办证</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-warm ">办证(正常)</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">持证(暂扣)</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">正常注销</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">吊销</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">标准化等级：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">一级</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-warm ">二级</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">三级</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">未达标</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">未评定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">煤矿类型：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">国有重点</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">地方国有</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">乡镇煤矿</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <h3 class="layui-inline">产能区间（万吨）：&nbsp;</h3>
+        <div class="layui-inline">
+          <select name="city" lay-verify="" class="layui-select">
+            <option value="">请选择</option>
+            <option value="010">0</option>
+            <option value="021">1</option>
+            <option value="0571">2</option>
+          </select>
+        </div>
+        --
+        <div class="layui-inline">
+          <select name="city" lay-verify="" class="layui-select">
+            <option value="">请选择</option>
+            <option value="010">1</option>
+            <option value="021">2</option>
+            <option value="0571">3</option>
+          </select>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">开拓方式：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">立井</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">斜井</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">立井斜井混合</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">公路运输</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">其他</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">矿井类型：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">特大型矿井</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">大型矿井</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">中型矿井</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">国有重点</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12" style="margin-bottom: 6px">
+        <div class="layui-row layui-col-space1" >
+          <div class="layui-col-md2">
+            <h3 class="layui-inline">供电方式：</h3>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-btn-container">
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">双网络</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">双电源</button>
+              <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal ">单网络</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      //Demo
+      layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+          layer.msg(JSON.stringify(data.field));
+          return false;
+        });
+      });
+    </script>
+    <script>
+      //注意：导航 依赖 element 模块，否则无法进行功能性操作
+      layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+      });
+    </script>
+  </div>
+  </div>
+
+</body>
+</html>

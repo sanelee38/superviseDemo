@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+  <title>隐患内容</title>
+</head>
+<body>
+
+
+<div class="layui-container" style="margin-top: 40px">
+  <div class="layui-row layui-col-space5">
+    <div class="layui-col-md4">
+      <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:;">井工煤矿</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">矿井建设</a></dd>
+            <dd><a href="javascript:;">开采</a></dd>
+            <dd><a href="javascript:;">通风、瓦斯和煤尘爆炸</a></dd>
+            <dd><a href="javascript:;">煤与瓦斯突出防治</a></dd>
+            <dd><a href="javascript:;">冲击地压防治</a></dd>
+            <dd><a href="javascript:;">防灭火</a></dd>
+            <dd><a href="javascript:;">防治水</a></dd>
+            <dd><a href="javascript:;">爆炸物品和井下爆破</a></dd>
+            <dd><a href="javascript:;">运输、提升和空气压缩机</a></dd>
+            <dd><a href="javascript:;">电气</a></dd>
+            <dd><a href="javascript:;">监控与通信</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  <div class="layui-col-md4">
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+      <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item ">
+        <a href="javascript:;">露天煤矿</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">矿井建设</a></dd>
+          <dd><a href="javascript:;">开采</a></dd>
+          <dd><a href="javascript:;">通风、瓦斯和煤尘爆炸</a></dd>
+          <dd><a href="javascript:;">煤与瓦斯突出防治</a></dd>
+          <dd><a href="javascript:;">冲击地压防治</a></dd>
+          <dd><a href="javascript:;">防灭火</a></dd>
+          <dd><a href="javascript:;">防治水</a></dd>
+          <dd><a href="javascript:;">爆炸物品和井下爆破</a></dd>
+          <dd><a href="javascript:;">运输、提升和空气压缩机</a></dd>
+          <dd><a href="javascript:;">电气</a></dd>
+          <dd><a href="javascript:;">监控与通信</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+<script>
+  //注意：导航 依赖 element 模块，否则无法进行功能性操作
+  layui.use('element', function(){
+    var element = layui.element;
+
+    //…
+  });
+</script>
+
+<script th:src="@{/layui/layui.js}" charset="utf-8"></script>
+<script>
+  layui.use(['form', 'element'], function(){
+    var form = layui.form;
+    var element = layui.element;
+
+    //自定义验证规则
+    form.verify({
+      price: [/(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/, "请输入正确的价格"]
+    });
+
+  });
+</script>
+</body>
+</html>

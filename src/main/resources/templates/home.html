@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Coal Safety</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#superviseYear").click(function(){
+                $("iframe").attr("src","/front/redirect/superviseYear");
+            });
+            $("#superviseMon").click(function(){
+                $("iframe").attr("src","/front/redirect/superviseMon");
+            });
+            $("#superviseQuarter").click(function(){
+                $("iframe").attr("src","/front/redirect/superviseQuarter");
+            });
+            $("#planStatistics").click(function(){
+                $("iframe").attr("src","/front/redirect/planStatistics");
+            });
+            $("#LawEn").click(function(){
+                $("iframe").attr("src","/front/redirect/LawEn");
+            });
+            $("#hiddenDanger").click(function(){
+                $("iframe").attr("src","/front/redirect/hiddenDanger");
+            });
+            $("#baseInfo").click(function(){
+                $("iframe").attr("src","/front/redirect/baseInfo");
+            });
+            $("#userInfo").click(function(){
+                $("iframe").attr("src","/front/redirect/userInfo");
+            });
+        })
+    </script>
+</head>
+<body>
+
+<div class="layui-layout layui-layout-admin layui-bg-blue">
+    <div class="layui-header">
+        <div class="layui-logo layui-bg-blue" style="width: 200px;text-align: center"><h2>Coal Safety</h2></div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href="">首页</a></li>
+            <li class="layui-nav-item "><a href="">数据导入</a></li>
+            <li class="layui-nav-item"><a id="userInfo" href="javascript:void(0)">用户管理</a></li>
+            <li class="layui-nav-item"><a href="">关于系统</a></li>
+            <li class="layui-nav-item"><a href=""> </a></li>
+            <li class="layui-nav-item"><a href=""> </a></li>
+            <li class="layui-nav-item"><a href=""> </a></li>
+<!--            <li class="layui-nav-item"><a href="">nav 1</a></li>-->
+<!--            <li class="layui-nav-item"><a href="">nav 2</a></li>-->
+<!--            <li class="layui-nav-item"><a href="">nav 3</a></li>-->
+<!--            <li class="layui-nav-item">-->
+<!--                <a href="javascript:;">nav groups</a>-->
+<!--                <dl class="layui-nav-child">-->
+<!--                    <dd><a href="">menu 11</a></dd>-->
+<!--                    <dd><a href="">menu 22</a></dd>-->
+<!--                    <dd><a href="">menu 33</a></dd>-->
+<!--                </dl>-->
+<!--            </li>-->
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                    小兰
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black ">
+        <div class="layui-side-scroll ">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree " lay-shrink="all"  lay-filter="test">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">煤矿检查计划</a>
+                    <dl class="layui-nav-child ">
+                        <dd ><a id="superviseYear" href="javascript:void(0)">年度监察计划</a></dd>
+                        <dd><a id="superviseMon" href="javascript:void(0)">月度监察计划</a></dd>
+                        <dd><a id="superviseQuarter" href="javascript:void(0)">季度监察计划</a></dd>
+                        <dd><a id="planStatistics" href="javascript:void(0)">计划分类统计</a></dd>
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">执法查询</a>
+                    <dl class="layui-nav-child">
+                        <dd><a id="menu_manage" href="javascript:void(0)">执法活动</a></dd>
+                        <dd class="layui-this"><a id="LawEn" href="javascript:void(0)">执法文书</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">历史隐患</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">历史检查</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">执法统计</a>
+                    <dl class="layui-nav-child">
+                        <dd><a id="baseInfo" href="javascript:void(0)">煤矿基本情况</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">执法文书统计</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">历史隐患统计</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">行政处罚统计</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">人员执法统计</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">现场处理统计</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">追责问责统计</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">执法知识库</a>
+                    <dl class="layui-nav-child">
+                        <dd><a id="menu_manage" href="javascript:void(0)">法律法规</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">检查内容</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">检查清单</a></dd>
+                        <dd><a id="hiddenDanger" href="javascript:void(0)">隐患内容</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">隐患清单</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">管理公告</a>
+                    <dl class="layui-nav-child">
+                        <dd><a id="menu_manage" href="javascript:void(0)">查看公告</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">发布公告</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">系统管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a id="menu_manage" href="javascript:void(0)">国家监察机构</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">地方监管机构</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">煤矿生产企业</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">第三方机构</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">新闻媒体</a></dd>
+                        <dd><a id="menu_manage" href="javascript:void(0)">社会公众</a></dd>
+                    </dl>
+                </li>
+<!--                <li class="layui-nav-item"><a href="javascript:;">menu item 123</a></li>-->
+<!--                <li class="layui-nav-item"><a href="">the links</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <iframe src="/front/redirect/superviseYear" style="width: 100%;height: 100%;border: 0px"></iframe>
+    </div>
+
+</div>
+
+<script src="/layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+</body>
+</html>

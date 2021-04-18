@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>执法文书 </title>
+</head>
+<body>
+
+<div class="layui-container" style="margin-top: 40px">
+    <div class="layui-row layui-col-space1">
+        <div class="layui-col-md2">
+          <h2>一般检查:</h2>
+        </div>
+        <div class="layui-col-md10" style="text-align: center">
+            <div class="layui-btn-container">
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">检查方案</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">现场检查笔录</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">现场处理决定书</button>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space1">
+        <div class="layui-col-md2">
+            <h2>复&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查:</h2>
+        </div>
+        <div class="layui-col-md10" style="text-align: center">
+            <div class="layui-btn-container">
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">检查方案</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">复查意见书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">隐患整改 </button>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space1">
+        <div class="layui-col-md2">
+            <h2>实施检查:</h2>
+        </div>
+        <div class="layui-col-md10" style="text-align: center">
+            <div class="layui-btn-container">
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">撤出作业人员命令书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">采样取证通知书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">先行登记保存证据通知书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">查封（扣押）决定书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">停供电函告书</button>
+                <button type="button"  class="layui-btn layui-btn-radius layui-btn-normal">解除停供电函告书</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <hr>
+    </div>
+    <div class="layui-row layui-col-space1">
+<!--        <div class="layui-col-md2">-->
+<!--            <h2>请选择检查属性</h2>-->
+<!--        </div>-->
+
+        <div class="layui-col-md8 layui-form-item" style="text-align: center">
+            <lable class="layui-form-label"><h2 style="width: 200px">请选择检查属性</h2></lable>
+            <div class="layui-input-block">
+                <select name="city" lay-verify="required" style="width: 200px;height: 30px">
+                    <option value=""></option>
+                    <option value="0">被检查单位</option>
+                    <option value="1">监管方式或类型</option>
+                    <option value="2">检查时间</option>
+                    <option value="3">煤矿概况</option>
+                    <option value="4">检查地点</option>
+                    <option value="4">检查的主要内容</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
